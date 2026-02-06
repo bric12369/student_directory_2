@@ -1,5 +1,6 @@
 class Student:
-    def __init__(self, name, cohort_id):
+    def __init__(self, id, name, cohort_id):
+        self.id = id
         self.name = name
         self.cohort_id = cohort_id
     
@@ -7,4 +8,4 @@ class Student:
         return self.__dict__ == value.__dict__
     
     def __repr__(self):
-        return f'Student({self.name}, {self.cohort_id})'
+        return f'Student({self.id}, {self.name}, {self.cohort_id})'
