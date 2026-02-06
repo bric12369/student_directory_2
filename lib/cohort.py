@@ -1,8 +1,9 @@
 class Cohort:
-    def __init__(self, id, name, start_date):
+    def __init__(self, id, name, start_date, students = []):
         self.id = id
         self.name = name
         self.start_date = start_date
+        self.students = students
 
     def __eq__(self, value):
         return self.__dict__ == value.__dict__

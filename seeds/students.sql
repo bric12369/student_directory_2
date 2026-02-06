@@ -28,4 +28,8 @@ INSERT INTO students
 
 INSERT INTO students
     (name, cohort_id)
+    VALUES('Rachel Brown', 1);
+
+INSERT INTO students
+    (name, cohort_id)
     VALUES('Jane Smith', 2);
