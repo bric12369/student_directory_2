@@ -1,4 +1,11 @@
 class Cohort:
-    def __init__(self, name, start_date):
+    def __init__(self, id, name, start_date):
+        self.id = id
         self.name = name
         self.start_date = start_date
+
+    def __eq__(self, value):
+        return self.__dict__ == value.__dict__
+    
+    def __repr__(self):
+        return f'Cohort({self.id}, {self.name}, {self.start_date})'
