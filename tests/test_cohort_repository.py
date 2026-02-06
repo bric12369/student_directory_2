@@ -8,3 +8,8 @@ def test_lists_all_cohorts(db_connection):
         Cohort(1, 'Orange', '12/12/2025'),
         Cohort(2, 'Blue', '12/06/2025')
     ]
+
+def test_find(db_connection):
+    db_connection.seed('seeds/students.sql')
+    repo = CohortRepository(db_connection)
+    assert repo.find(1) == Cohort(1, 'Orange', '12/12/2025')
